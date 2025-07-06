@@ -1,0 +1,79 @@
+DAY2:
+PROBLEM 1:
+Get Subscription
+Chef wants to conduct a lecture for which he needs to set up an online meeting of exactly X minutes.
+The meeting platform supports a meeting of maximum 30 minutes without subscription and a meeting of unlimited duration with subscription.
+Determine whether Chef needs to take a subscription or not for setting up the meet.
+
+Input Format
+First line will contain T, the number of test cases. Then the test cases follow.
+Each test case contains a single integer X - denoting the duration of the lecture.
+Output Format
+For each test case, print in a single line, YES if Chef needs to take the subscription, otherwise print NO.
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+
+Constraints
+1≤T≤100
+1≤X≤100
+
+CODE:
+T=int(input())
+for _ in range(T):
+    X=int(input())
+    if(X>30):
+        print("YES")
+    else:
+        print("NO")
+SAMPLE INPUT:
+4
+50
+3
+30
+80
+
+SAMPLE OUTPUT:
+YES
+NO
+NO
+YES
+
+
+
+PROBLEM 2:
+
+Police and Thief
+Chef discovered that his secret recipe has been stolen. He immediately informs the police of the theft.
+It is known that the policeman and thief move on the number line. You are given that:
+
+The initial location of the policeman on the number line is X and his speed is 2 units per second.
+The initial location of the thief on the number line is Y and his speed is 1 unit per second.
+Find the minimum time (in seconds) in which the policeman can catch the thief. Note that, the policeman catches the thief as soon as their locations become equal and the thief will try to evade the policeman for as long as possible.
+Input Format
+
+The first line of input will contain an integer T — the number of test cases. The description of T test cases follows.
+The first and only line of each test case contains two integers X and Y, as described in the problem statement.
+
+Output Format
+
+For each test case, output in a single line the minimum time taken by the policeman to catch the thief.
+
+Constraints
+1≤T≤1000
+X,Y≤10^5
+
+CODE:
+T=int(input())
+for _ in range(T):
+    X,Y=map(int,input().split())
+    print(abs(X-Y))
+
+SAMPLE INPUT:
+3
+1 3
+2 1
+1 1
+
+SAMPLE OUTPUT:
+2
+1
+0
