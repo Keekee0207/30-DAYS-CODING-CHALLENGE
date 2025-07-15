@@ -1,0 +1,70 @@
+DAY 8:
+PROBLEM 1:
+ever
+Chef is not feeling well today. He measured his body temperature using a thermometer and it came out to be X °F.
+
+A person is said to have fever if his body temperature is strictly greater than 98 °F.
+
+Determine if Chef has fever or not.
+
+Input Format
+The first line contains a single integer T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains one integer X - the body temperature of Chef in °F.
+Output Format
+For each test case, output YES if Chef has fever. Otherwise, output NO.
+
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs, Yes will be considered identical).
+
+CODE:
+T=int(input())
+for _ in range(T):
+    X=int(input())
+    if(X>98):
+        print("YES")
+    else:
+        print("NO")
+SAMPLE INPUT:
+3
+98
+100
+96
+
+SAMPLE OUTPUT:
+NO
+YES
+NO
+
+PROBLEM 2:
+Cyclic Quadrilateral
+Read problem statements in Mandarin Chinese, Russian, and Vietnamese as well.
+You are given the sizes of angles of a simple quadrilateral (in degrees) A,B,C,D, in some order along its perimeter. Determine whether the quadrilateral is cyclic.
+
+Note: A quadrilateral is cyclic if and only if the sum of opposite angles is 180.
+
+Input
+The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
+The first and only line of each test case contains four space-separated integer A,B,C AND D
+Output
+Print a single line containing the string "YES" if the given quadrilateral is cyclic or "NO" if it is not (without quotes).
+
+You may print each character of the string in uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+
+CODE:
+
+T=int(input())
+for  _ in range(T):
+    A,B,C,D=map(int,input().split())
+    if ((A+C==180) and (B+D==180)):
+        print("YES")
+    else:
+        print("NO")
+SAMPLE INPUT:
+3
+10 20 30 300
+10 20 170 160
+179 1 179 1
+
+SAMPLE OUTPUT:
+NO
+YES
+NO
