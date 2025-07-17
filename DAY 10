@@ -1,0 +1,60 @@
+DAY 10
+PROBLEM 1:
+each the Target
+There is a cricket match going on between two teams A and B.
+
+Team B is batting second and got a target of X runs. Currently, team B has scored Y runs. Determine how many more runs Team B should score to win the match.
+Note: The target score in cricket matches is one more than the number of runs scored by the team that batted first.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of two space-separated integers X and Y, the target for team B and the current score of team B respectively.
+Output Format
+For each test case, output how many more runs team B should score to win the match.
+
+CODE:
+T=int(input())
+for _ in range(T):
+    X,Y=map(int,input().split())
+    print(X-Y)
+
+SAMPLE INPUT:
+4
+200 50
+100 99
+130 97
+53 51
+SAMPLE OUTPUT:
+150
+1
+33
+2
+
+PROBLEM 2:
+Janmansh and Assignments
+Janmansh has to submit 3 assignments for Chingari before 10 pm and he starts to do the assignments at X pm. Each assignment takes him 1 hour to complete. Can you tell whether he'll be able to complete all assignments on time or not?
+
+Input Format
+The first line will contain T - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains one integer X - the time when Janmansh starts doing the assignments.
+Output Format
+For each test case, output Yes if he can complete the assignments on time. Otherwise, output No.
+
+You may print each character of Yes and No in uppercase or lowercase (for example, yes, yEs, YES will be considered identical).
+
+CODE:
+T=int(input())
+for _ in range(T):
+    X=int(input())
+    if((X+3)<=10):
+        print('YES')
+    else:
+        print('NO')
+
+SAMPLE INPUT:
+2
+7
+9
+SAMPLE OUTPUT:
+Yes
+No
