@@ -1,0 +1,55 @@
+DAY 28
+PROBLEM 1
+Bob at the Bank
+Bob has an account in the Bobby Bank. His current account balance is W rupees.
+
+Each month, the office in which Bob works deposits a fixed amount of X rupees to his account.
+Y rupees is deducted from Bob's account each month as bank charges.
+
+Find his final account balance after Z months. Note that the account balance can be negative as well.
+
+Input Format
+The first line will contain T, the number of test cases. Then the test cases follow.
+Each test case consists of a single line of input, containing four integers W,X,Y, and Z — the initial amount, the amount deposited per month, the amount deducted per month, and the number of months.
+Output Format
+For each test case, output in a single line the final balance in Bob's account after Z months.
+SOLUTION
+T=int(input())
+for _ in range(T):
+    W,X,Y,Z=map(int,input().split())
+
+    print(W+(X-Y)*Z)
+PROBLEM 2
+ecent contest problems
+CodeChef recently revamped its practice page to make it easier for users to identify the next problems they should solve by introducing some new features:
+
+Recent Contest Problems - Contains only problems from the last 2 contests
+Separate Un-Attempted, Attempted, and All tabs
+Problem Difficulty Rating - The Recommended dropdown menu has various difficulty ranges so that you can attempt the problems most suited to your experience
+Popular Topics and Tags
+Chef has been participating regularly in rated contests but missed the last two contests due to his college exams. He now wants to solve them and so he visits the practice page to view these problems.
+
+Given a list of N contest codes, where each contest code is either START38 or LTIME108, help Chef count how many problems were featured in each of the contests.
+
+Input Format
+First line will contain T, number of test cases. Then the test cases follow.
+Each test case contains of two lines of input.
+First line of input contains the total count of problems that appeared in the two recent contests - N.
+Second line of input contains the list of N contest codes. Each code is either START38 or LTIME108, to which each problem belongs.
+Output Format
+For each test case, output two integers in a single new line - the first integer should be the number of problems in START38, and the second integer should be the number of problems in LTIME108.
+SOLUTION:
+T=int(input())
+for _ in range(T):
+    N=int(input())
+    c=0
+    d=0
+    values=list((input().split()))
+    for i in values:
+        if i=='START38':
+            c+=1
+        if i=='LTIME108':
+            d+=1
+    print(c,end=" ")
+    print(d)
+        
