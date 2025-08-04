@@ -1,0 +1,40 @@
+DAY 25
+PROBLEM 1
+Reach on Time
+Chef has recently moved into an apartment. It takes 30 minutes for Chef to reach office from the apartment.
+
+Chef left for the office X minutes before Chef was supposed to reach. Determine whether or not Chef will be able to reach on time.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of a single integer X.
+Output Format
+For each test case, output YES if Chef will reach on time, NO otherwise.
+
+The output is case-insensitive. Thus, the strings YES, yes, yeS, and Yes are all considered the same.
+
+SOLUTION
+T=int(input())
+for _ in range(T):
+    X=int(input())
+    if(X>=30):
+        print("YES")
+    else:
+        print('NO')
+PROBLEM 2
+Chef in his Office
+Recently Chef joined a new company. In this company, the employees have to work for X hours each day from Monday to Thursday. Also, in this company, Friday is called Chill Day — employees only have to work for Y hours 
+(Y<X) on Friday. Saturdays and Sundays are holidays.
+
+Determine the total number of working hours in one week.
+
+Input Format
+The first line contains a single integer T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two space-separated integers X and Y — the number of working hours on each day from Monday to Thursday and the number of working hours on Friday respectively.
+Output Format
+For each test case, output the total number of working hours in one week.
+SOLUTION
+T=int(input())
+for _ in range(T):
+    X,Y=map(int,input().split())
+    print(X*4+Y)
