@@ -1,0 +1,52 @@
+DAY 17 
+PROBLEM 1
+Parliament
+An important resolution is being discussed in the Parliament of Chefland. There are N members present in the Parliament out of which X members voted in favour of the resolution and the remaining voted against it.
+
+According to the constitution of Chefland, a resolution is passed if and only if half or more than half the members present in the Parliament vote in favour of the resolution.
+
+Determine if the resolution is passed or not.
+
+Input Format
+The first line contains a single integer T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two space-separated integers N and X — the total number of members present in the Parliament and the number of members who voted in favour of the resolution.
+Output Format
+For each test case, output YES if the resolution is passed. Otherwise, output NO.
+
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs and Yes will be considered identical).
+
+SOLUTION
+T=int(input())
+for _ in range(T):
+    N,X=map(int,input().split())
+    if(N/2<=X ):
+        print('YES')
+    else:
+        print('NO')
+PROBLEM 2
+Single-use Attack
+Chef is playing a video game, and is now fighting the final boss.
+
+The boss has H health points. Each attack of Chef reduces the health of the boss by X.
+Chef also has a special attack that can be used at most once, and will decrease the health of the boss by Y.
+
+Chef wins when the health of the boss is ≤0.
+What is the minimum number of attacks needed by Chef to win?
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+The first and only line of each test case will contain three space-separated integers H,X,Y — the parameters described in the statement.
+Output Format
+For each test case, output on a new line the minimum number of attacks needed by Chef to win.
+
+SOLUTION
+T=int(input())
+for _ in range(T):
+    H,X,Y=map(int,input().split())
+    attack=0
+    H=H-Y
+    attack+=1
+    while(H>0):
+        H=H-X
+        attack+=1
+    print(attack)
