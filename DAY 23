@@ -1,0 +1,50 @@
+DAY 23
+PROBLEM 1
+Audible Range
+Chef's dog binary hears frequencies starting from 67 Hertz to 45000 Hertz (both inclusive).
+
+If Chef's commands have a frequency of X Hertz, find whether binary can hear them or not.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of a single integer X - the frequency of Chef's commands in Hertz.
+Output Format
+For each test case, output on a new line YES, if binary can hear Chef's commands. Otherwise, print NO.
+
+The output is case-insensitive. Thus, the strings YES, yes, yeS, and Yes are all considered the same.
+SOLUTION
+T=int(input())
+for _ in range(T):
+    X=int(input())
+    if(X>=67 and X<=45000):
+        print("YES")
+    else:
+        print("NO")
+PROBLEM 2
+Complementary Strand in a DNA
+You are given the sequence of Nucleotides of one strand of DNA through a string S of length S contains the character A,T,C, and G only.
+
+Chef knows that:A is complementary to T is complementary to C is complementary to G is complementary to C
+Using the string S, determine the sequence of the complementary strand of the DNA.
+
+Input Format
+First line will contain T, number of test cases. Then the test cases follow.
+First line of each test case contains an integer N - denoting the length of string Second line contains N characters denoting the string S.
+Output Format
+For each test case, output the string containing N characters - sequence of nucleotides of the complementary strand.
+SOLUTION
+T=int(input())
+for _ in range(T):
+    N=int(input())
+    s=input()
+    ans=""
+    for i in s:
+        if i=='A':
+            ans+='T'
+        if i=='T':
+            ans+='A'
+        if i=='C':
+            ans+='G'
+        if i=='G':
+            ans+='C'
+    print(ans)
