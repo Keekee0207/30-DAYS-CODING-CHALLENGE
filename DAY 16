@@ -1,0 +1,50 @@
+DAY 16
+PROBLEM 1
+October Marathon
+Chef organised a 30 kilometres marathon in Chefland.
+The participants receive medals on completing the marathon as following:
+
+If the total time taken is less than 3 hours, they receive a GOLD medal.
+If the total time taken is greater than equal t 3 hours but less than 6 hours, they receive a SILVER medal.
+If the total time taken is greater than equal to 6 hours, they receive a BRONZE medal.
+Chefina participated in the marathon and completed it in X hours. Which medal would she receive?
+
+Input Format
+The input consists of a single integer X — the number of hours Chefina took to complete the marathon.
+Output Format
+Output the medal Chefina would recieve.
+
+SOLUTION
+X=int(input())
+if(X<3):
+    print("GOLD")
+elif(X>=3 and X<6):
+    print("SILVER")
+else:
+    print("BRONZE")
+PROBLEM 2
+
+Minimum number of Flips
+Chef has an array A of length N consisting of 1 and −1 only.
+
+
+Find the minimum number of operations required to make the sum of the array equal to 0. Output -1 if the sum of the array cannot be made 0.
+
+Input Format
+First line will contain T, number of test cases. Then the test cases follow.
+First line of each test case consists of a single integer N denoting the length of the array.
+Second line of each test case contains N space-separated integers A.
+Output Format
+For each test case, output the minimum number of operations to make the sum of the array equal to 0. Output -1 if it is not possible to make the sum equal to 0.
+
+SOLUTION:
+T=int(input())
+for _ in range(T):
+    N=int(input())
+    A=list(map(int,input().split()))
+    one=A.count(1)
+    minus=A.count(-1)
+    if(N%2!=0):
+        print('-1')
+    else:
+        print(abs((one-minus)//2))
