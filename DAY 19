@@ -1,0 +1,45 @@
+DAY 19 
+PROBLEM 1
+Netflix
+Alice, Bob, and Charlie are contributing to buy a Netflix subscription. However, Netfix allows only two users to share a subscription.
+
+Given that Alice, Bob, and Charlie have A,B, and C rupees respectively and a Netflix subscription costs X rupees, find whether any two of them can contribute to buy a subscription.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case contains four space-separated integers A,B,C, and X — the amount that Alice, Bob, and Charlie have, and the cost of a Netflix subscription respectively.
+Output Format
+For each test case, output YES, if any two of Alice, Bob, and Charlie can contribute to buy a Netflix subscription or NO otherwise.
+
+You may print each character in uppercase or lowercase. For example, NO, no, No, and nO are all considered identical.
+SOLUTION
+T=int(input())
+for _ in range(T):
+    A,B,C,X=map(int,input().split())
+    if(A+B>=X or B+C>=X or A+C>=X):
+        print("YES")
+    else:
+        print("NO")
+PROBLEM 2
+Exams
+In Chefland, there are X schools, and each school has Y students.
+The year end results are in and a total of Z students passed the exams.
+
+Assuming that all students appeared for the exams, find whether the number of students who passed in Chefland was strictly greater than 50%.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of three space-separated integers X,Y, and Z, as mentioned in the statement.
+Output Format
+For each test case, output on a new line, YES, if the total number of students who passed in Chefland was strictly greater than 50%, otherwise print NO.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+SOLUTION
+T=int(input())
+for _ in range(T):
+    X,Y,Z=map(int,input().split())
+    total=X*Y 
+    if((Z/total)*100 <=50):
+        print("NO")
+    else:
+        print("YES")
