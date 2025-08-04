@@ -1,0 +1,48 @@
+DAY 30
+PROBLEM 1
+Four Tickets
+Four friends want to attend a concert. Each ticket costs X rupees.
+They have decided to go to the concert if and only if the total cost of the tickets does not exceed 1000 rupees.
+
+Determine whether they will be going to the concert or not.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of a single integer X, the cost of each ticket.
+Output Format
+For each test case, output YES if they will be going to the concert, NO otherwise.
+
+You can print each character in uppercase or lowercase. For example, the strings YES, yes, Yes, and yES, are all considered identical.
+SOLUTION
+T=int(input())
+for _ in range(T):
+    N=int(input())
+    if(N*4<=1000):
+        print("YES")
+    else:
+        print("NO")
+PROBLEM 2
+Water Mixing
+Chef is setting up a perfect bath for himself. He has X litres of hot water and Y litres of cold water.
+The initial temperature of water in his bathtub is A degrees. On mixing water, the temperature of the bathtub changes as following:
+
+The temperature rises by 1 degree on mixing 1 litre of hot water.
+The temperature drops by 1 degree on mixing 1 litre of cold water.
+Determine whether he can set the temperature to B degrees for a perfect bath.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of four space-separated integers A,B,X, and Y — the initial temperature of bathtub, the desired temperature of bathtub, the amount of hot water in litres, and the amount of cold water in litres respectively.
+Output Format
+For each test case, output on a new line, YES if Chef can get the desired temperature for his bath, and NO otherwise.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+SOLUTION
+T=int(input())
+for _ in range(T):
+    A,B,X,Y=map(int,input().split())
+    if(A-Y<=B and B<=A+X):
+        print('YES')
+    else:
+        print('NO')
+    
